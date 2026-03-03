@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Simple and interactive weather forecast app built by Soufiane Zekaoui.">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Weather Forecast_SF</h1>
+            <div class="search-container">
+                <input type="text" id="cityInput" placeholder="Enter city name">
+                <button id="searchButton" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <div class="toggle-container">
+                <button id="currentWeatherBtn" class="active">Current Weather</button>
+                <button id="forecastBtn">5-Day Forecast</button>
+            </div>
+        </header>
+        
+        <div id="loader" class="hidden">
+            <div class="spinner"></div>
+        </div>
+        
+        <div id="errorContainer" class="hidden"></div>
+        
+        <main>
+            <!-- Current weather section -->
+            <section id="currentWeather" class="weather-card">
+                <div class="weather-header">
+                    <h2 id="cityName">-</h2>
+                    <p id="currentDate">-</p>
+                </div>
+                <div class="weather-body">
+                    <div class="weather-main">
+                        <img id="weatherIcon" src="images/placeholder.png" alt="Weather Icon">
+                        <div class="temperature">
+                            <span id="temperature">-</span>
+                            <span class="unit">°C</span>
+                        </div>
+                        <div class="weather-description" id="weatherDescription">-</div>
+                    </div>
+                    <div class="weather-details">
+                        <div class="detail">
+                            <i class="fas fa-temperature-high"></i>
+                            <div class="detail-info">
+                                <span class="detail-label">Feels Like</span>
+                                <span class="detail-value" id="feelsLike">-</span>
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-tint"></i>
+                            <div class="detail-info">
+                                <span class="detail-label">Humidity</span>
+                                <span class="detail-value" id="humidity">-</span>
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-cloud-rain"></i>
+                            <div class="detail-info">
+                                <span class="detail-label">Precipitation</span>
+                                <span class="detail-value" id="precipitation">-</span>
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-wind"></i>
+                            <div class="detail-info">
+                                <span class="detail-label">Wind</span>
+                                <span class="detail-value" id="wind">-</span>
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-sun"></i>
+                            <div class="detail-info">
+                                <span class="detail-label">UV Index</span>
+                                <span class="detail-value" id="uvIndex">-</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Forecast section -->
+            <section id="forecast" class="hidden">
+                <div class="forecast-header">
+                    <h2 id="forecastCityName">-</h2>
+                </div>
+                <div class="forecast-container" id="forecastContainer">
+                    <!-- Forecast cards will be added here dynamically -->
+                </div>
+                
+                <!-- Weather data visualization -->
+                <div class="chart-container">
+                    <canvas id="temperatureChart"></canvas>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>© 2025 Weather App | Powered by M. SOUFIANE ZEKAOUI</p>
+        </footer>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <script>
+        if (typeof Chart === 'undefined') {
+            document.write('<script src="js/vendor/chart.min.js"><\/script>');
+        }
+    </script>
+    <script src="js/app.js"></script>
+</body>
+</html>
