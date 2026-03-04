@@ -2,7 +2,7 @@
 
 A modern, responsive web application that displays current weather conditions and 5-day forecasts for any city worldwide. Built with Java Servlets, HTML5, CSS3, and JavaScript.
 
-![Weather App Screenshot](screenshots/app-preview.png)
+![Weather App Screenshot](screenshots/app-preview.jpeg)
 
 ## 🌟 Features
 
@@ -203,14 +203,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📸 Screenshots
 
-### Current Weather View
-![Current Weather](screenshots/current-weather.png)
-
 ### 5-Day Forecast View
-![Forecast](screenshots/forecast.png)
+![Forecast](screenshots/forecast.jpeg)
 
 ### Mobile Responsive
-![Mobile View](screenshots/mobile-view.png)
+![Mobile View](screenshots/mobile-view.jpeg)
 
 ## 🔮 Future Enhancements
 
