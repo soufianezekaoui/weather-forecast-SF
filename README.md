@@ -52,23 +52,19 @@ Before you begin, ensure you have the following installed:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/soufianezekaoui/weather-Forecast-SF.git
-cd weather-Forecast-SF
+git clone https://github.com/soufianezekaoui/weather-forecast-SF.git
+cd weather-forecast-SF
 ```
 
 ### 2. Configure API Key
 
-Open `src/main/java/com/weatherapp/servlet/WeatherServlet.java` and replace `YOUR_API_KEY` with your actual OpenWeatherMap API key:
+Open `src/main/java/com/weatherapp/servlet/WeatherServlet.java` and replace `API_KEY` with an actual OpenWeatherMap API key(if the existing one has expired):
 
 ```java
-private static final String API_KEY = "your_actual_api_key_here";
+private static final String API_KEY = "The_actual_api_key_here";
 ```
 
-### 3. Add Background Image
-
-Place a background image named `weather-bg.jpg` in the `src/main/webapp/images/` directory.
-
-### 4. Build the Project
+### 3. Build the Project
 
 ```bash
 mvn clean package
@@ -76,7 +72,7 @@ mvn clean package
 
 This will create a WAR file at `target/weather-app.war`.
 
-### 5. Deploy to Tomcat
+### 4. Deploy to Tomcat
 
 **Option A: Manual Deployment**
 ```bash
@@ -105,13 +101,13 @@ http://localhost:8080/weather-app/
 1. **Enter a City Name**: Type any city name in the search box
 2. **Search**: Click the search button or press Enter
 3. **View Current Weather**: See detailed current weather conditions
-4. **Switch to Forecast**: Click the "7-Day Forecast" button to view predictions
+4. **Switch to Forecast**: Click the "5-Day Forecast" button to view predictions
 5. **Explore Data**: Hover over cards for interactive effects and view the temperature chart
 
 ## 📂 Project Structure
 
 ```
-weather-application/
+weather-app/
 ├── src/
 │   └── main/
 │       ├── java/
@@ -134,7 +130,7 @@ weather-application/
 
 ## 🔧 Configuration
 
-### Environment Variables (Optional)
+### Environment Variables
 
 For production deployment, consider externalizing the API key:
 
@@ -160,7 +156,7 @@ The application uses the following OpenWeatherMap endpoints:
 ### Common Issues
 
 **1. API Key Errors**
-- Ensure you've replaced `YOUR_API_KEY` with a valid key
+- Ensure you've replaced `API_KEY` with a valid key
 - Verify your API key is activated (may take a few hours after signup)
 - Check if your API plan includes the required endpoints
 
@@ -193,9 +189,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👨‍💻 Author
 
-**Your Name**
+**Soufiane ZEKAOUI**
 - GitHub: [@soufianezekaoui](https://github.com/soufianezekaoui)
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/soufianezekaoui)
+- LinkedIn: [Soufiane Zekaoui](https://linkedin.com/in/soufiane-zekaoui-445b1b352/)
+- Portfolio: [My-Personal-Website](https://soufianezekaoui.github.io/my_soufianeze_portfolio/)
 
 ## 🙏 Acknowledgments
 
@@ -209,7 +206,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ### Current Weather View
 ![Current Weather](screenshots/current-weather.png)
 
-### 7-Day Forecast View
+### 5-Day Forecast View
 ![Forecast](screenshots/forecast.png)
 
 ### Mobile Responsive
@@ -225,26 +222,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [ ] Dark mode theme
 - [ ] Offline support with caching
 - [ ] Search history
-
-## 📊 Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Opera (latest)
-
-## ⚙️ System Requirements
-
-- **Minimum**: 
-  - 512MB RAM
-  - JDK 17
-  - Tomcat 10.1
-  
-- **Recommended**:
-  - 1GB RAM
-  - JDK 17 or later
-  - Tomcat 10.1 or later
 
 ---
 
